@@ -4,18 +4,16 @@ gem 'rails', '4.0'
 gem 'sqlite3'
 
 group :assets do
-  gem 'sass-rails',   '4.0'
-  gem 'coffee-rails', '~> 4.1.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'railties', '4.0'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'railties'
   gem 'jquery-ui-rails'
   gem 'jquery-rails'
   gem 'jquery-rest-rails'
-  gem 'twitter-bootstrap-rails'
-  gem 'less'
-  gem 'less-rails'
-  gem 'less-rails-bootstrap'
   gem 'therubyracer', platforms: :ruby
+  gem 'bootstrap-sass'
+  gem 'autoprefixer-rails'
 end
 
 group :development do
