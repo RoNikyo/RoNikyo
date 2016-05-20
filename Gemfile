@@ -30,3 +30,5 @@ end
 
 gem 'thin'
 gem 'kaminari'
+gem 'twitter-bootstrap-rails'
+gem 'slim'
