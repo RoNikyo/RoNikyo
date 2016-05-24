@@ -38,4 +38,5 @@ RoNikyo::Application.configure do
   config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
