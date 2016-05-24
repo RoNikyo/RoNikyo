@@ -2,9 +2,20 @@ h1 Persons#profile
 p Find me in app/views/persons/profile.html.slim
 
 table.table
-  tr
-    td hello
-    td hello
-  tr
-    td hello
-    td hello
+  thead
+    tr
+      th User's email
+      th Actions
+  tbody
+    - @user.each do |el|
+      tr
+        td =el.email
+        td
+          i.fa.fa-remove aria-hidden="true"
+          i.fa.fa-edit aria-hidden="true"
+          i.fa.fa-book aria-hidden="true"
+          i.fa.fa-cog aria-hidden="true"
+
+
+
+

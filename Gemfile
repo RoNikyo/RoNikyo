@@ -12,6 +12,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'jquery-rest-rails'
+gem 'font-awesome-rails'
 
 group :assets do
   gem 'sass-rails'
