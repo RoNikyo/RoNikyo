@@ -1,22 +1,29 @@
 source 'http://rubygems.org'
 
 gem 'rails', '4.0'
-gem 'sqlite3'
+
+gem 'thin'
+gem 'kaminari'
+gem 'slim'
+gem 'devise'
+gem 'twitter-bootstrap-rails', '2.2.8'
+gem 'less-rails'
+gem 'therubyracer', platforms: :ruby
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'jquery-rest-rails'
 
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  gem 'railties'
-  gem 'jquery-ui-rails'
-  gem 'jquery-rails'
-  gem 'jquery-rest-rails'
-  gem 'therubyracer', platforms: :ruby
   gem 'bootstrap-sass'
-  gem 'autoprefixer-rails'
+  gem 'bootstrap-will_paginate'
+  gem 'less-rails-bootstrap'
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'quiet_assets'
   gem 'pry'
   gem 'rubocop', require: false
@@ -27,9 +34,3 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
 end
-
-gem 'thin'
-gem 'kaminari'
-gem 'twitter-bootstrap-rails'
-gem 'slim'
-gem 'devise'
