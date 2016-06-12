@@ -1,21 +1,17 @@
-h1 Persons#profile
-p Find me in app/views/persons/profile.html.slim
-
 table.table
   thead
     tr
       th User's email
       th Actions
   tbody
-    - @user.each do |el|
+    - @users.each do |user|
       tr
-        td =el.email
+        td = user.email
         td
-          i.fa.fa-remove aria-hidden="true"
-          i.fa.fa-edit aria-hidden="true"
-          i.fa.fa-book aria-hidden="true"
-          i.fa.fa-cog aria-hidden="true"
+          = link_to person_path(user), remote: true, data: { toggle: "modal", target: ".modal"}
+            i.fa.fa-book.has-tooltip aria-hidden="true" data-toggle='tooltip' data-original-title='Show'
+          - if is_current_user? user.id
+            i.fa.fa-cog.has-tooltip aria-hidden="true" data-toggle='tooltip' data-original-title='Edit'
+            i.fa.fa-remove.has-tooltip aria-hidden="true" data-toggle='tooltip' data-original-title='Remove'
 
-
-
-
+= render 'shared/modal'
